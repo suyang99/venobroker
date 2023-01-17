@@ -34,7 +34,7 @@ class AuthMiddleware implements MiddlewareInterface
      * @var AuthenticationLogic
      */
     #[Inject]
-    protected AuthenticationLogic $auth;
+    protected ?AuthenticationLogic $auth = null;
 
     public function __construct(ContainerInterface $container, HttpResponse $response, RequestInterface $request)
     {

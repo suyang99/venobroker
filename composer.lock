@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f48a7e32bb95766a0ce37d75c336acf5",
+    "content-hash": "14a9d7bc39dd62428458dcb2852ee42e",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -4913,6 +4913,60 @@
                 "source": "https://github.com/PHP-DI/PhpDocReader/tree/2.2.1"
             },
             "time": "2020-10-12T12:39:22+00:00"
+        },
+        {
+            "name": "phper666/hyperf-server-command",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phper666/hyperf-server-command.git",
+                "reference": "0ccf1105c9835d35bff956b054cb3601c0f9ad10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phper666/hyperf-server-command/zipball/0ccf1105c9835d35bff956b054cb3601c0f9ad10",
+                "reference": "0ccf1105c9835d35bff956b054cb3601c0f9ad10",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "suggest": {
+                "hyperf/command": "required hyperf/command ~2.0.0 OR required hyperf/command ~1.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "hyperf": {
+                    "config": "Phper666\\HyperfServiceCommand\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "files": [],
+                "psr-4": {
+                    "Phper666\\HyperfServiceCommand\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "liyuzhao",
+                    "email": "562405704@qq.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/phper666/hyperf-server-command/issues",
+                "source": "https://github.com/phper666/hyperf-server-command/tree/master"
+            },
+            "time": "2020-07-28T05:38:15+00:00"
         },
         {
             "name": "phpoption/phpoption",
