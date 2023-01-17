@@ -5,8 +5,9 @@ namespace App\Common;
 use Hyperf\Logger\LoggerFactory;
 use Hyperf\Utils\ApplicationContext;
 use Hyperf\Utils\Contracts\Arrayable;
-use Hyperf\Utils\Stringable;
+use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Psr\Log\LoggerInterface;
 use Throwable;
 
@@ -24,7 +25,10 @@ class Logger
      */
     public static function instance(string $name = 'app', string $config = 'default'): LoggerInterface
     {
-        return ApplicationContext::getContainer()->get(LoggerFactory::class)->get($name, $config);
+        try {
+            return ApplicationContext::getContainer()->get(LoggerFactory::class)->get($name, $config);
+        } catch (NotFoundExceptionInterface|ContainerExceptionInterface $e) {
+        }
     }
 
     /**
